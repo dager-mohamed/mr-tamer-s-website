@@ -43,8 +43,7 @@ nav{
 }
 .nav-content-logo{
     width: 100px;
-    pointer-events: none;
-    user-select: none;
+
 }
 .nav-content-logo img{
     width: 200px;
@@ -69,4 +68,9 @@ nav{
 }
 .button-nav button:active{
     background-color: #544af4;
+}
+
+a{
+    text-decoration: none;
+    color: black;
 }

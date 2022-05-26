@@ -1,3 +1,4 @@
 import { Navbar } from "./Navbar/Navbar";
 import { Landing } from "./LandingPage/Landing";
-export { Navbar, Landing };
+import { LoginPage } from './LoginPage/Login'
+export { Navbar, Landing, LoginPage };

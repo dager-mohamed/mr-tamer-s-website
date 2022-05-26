@@ -2,6 +2,7 @@ import React from "react";
 import "./Landing.css";
 import { Navbar } from "../index";
 import teaching from "../../teaching.svg";
+import { Link } from 'react-router-dom'
 export function Landing() {
   return (
     <div>
@@ -14,7 +15,9 @@ export function Landing() {
               Be master in <span className="span-landing">English</span>
             </h1>
             <div className="btn-landing">
+              <Link to="/login">
               <button>Log in</button>
+              </Link>
             </div>
           </div>
 

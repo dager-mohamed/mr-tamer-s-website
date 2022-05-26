@@ -1,15 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
-import { Route, Switch, BrowserRouter } from 'react-router-dom'
-import { Navbar, Landing } from './components/index'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+} from "react-router-dom";
+import { Navbar, Landing, LoginPage } from './components/index'
 function App() {
   return (
     <div>
-      <BrowserRouter>
-      <Switch>
-        <Route path="/" exact={true} component={Landing} /> 
-      </Switch>
-      </BrowserRouter>
+<BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Landing/>} />
+        <Route path="/login" element={<LoginPage/>} />
+      </Routes>
+    </BrowserRouter>
+    </div>
+  );
+}
+function Home() {
+  return (
+    <div>
+      <h1>Home</h1>
+      <nav>
+        <Link to="/">Home</Link> |{" "}
+        <Link to="about">About</Link>
+      </nav>
     </div>
   );
 }
