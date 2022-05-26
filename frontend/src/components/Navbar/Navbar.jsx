@@ -1,7 +1,9 @@
 import React from "react";
 import "./Navbar.css";
 import logo from "../../logo.svg";
+import { useHistory, useParams } from 'react-router-dom';
 export function Navbar() {
+  const history = useHistory();
   return (
     <div>
       <nav>
@@ -13,7 +15,7 @@ export function Navbar() {
 
             <div className="nav-content-ul">
               <ul className="nav-ul">
-                <li className="nav-li">Home</li>
+                <li className={ history.location.pathname == '/' ? "nav-li nav-li-active" : "nav-li"}>Home</li>
                 <li className="nav-li">Dashboard</li>
                 <li className="nav-li">Contact</li>
               </ul>

@@ -44,3 +44,137 @@
 .btn-landing button:active{
     background-color: #544af4;
 }
+
+.row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+.col{
+    padding-left: 50px;
+    padding-right: 50px;
+    cursor: pointer;
+
+}
+.shape{
+    width: 230px;
+    height: 220px;
+    border: 2px solid #000;
+    border-radius: 126% 50% 80% 100% / 80% 50% 107% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    transition: 0.5s;
+    position: relative;
+}
+.inner-shape{
+    width: 200px;
+    height: 230px;
+    border-radius: 50% 126% 100% 80% / 50% 80% 100% 107%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.bkg1{
+    background: #e91e63;
+}
+.content{
+    color: #fff;
+    position: relative;
+}
+
+.col:hover .shape,.col:hover .inner-shape{
+    width: 220px;
+    height: 200px;
+    border-radius: 77% 87% 77% 90% / 54% 52% 114% 107%;
+}
+.col:hover a{
+    top: 80px;
+}
+.shape .fa{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    color: #fff;
+    padding: 12px;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 20px -2px #000;
+}
+.shape .fa img{
+    width: 40px;
+    height: 40px;
+}
+.bkg2{
+    background: #4caf50;
+}
+.bkg3{
+    background: #3f51b5;
+}
+.bkg4{
+    background: #ff5722;
+}
+.center-text-landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-text-landing h1{
+    font-size: 45px;
+}
+.center-text-landing h1 span{
+    color: #3f51b5;
+}
+.fut-content{
+    margin-top: 14em;
+}
+.private-lesson-landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.private-lesson-landing div h1 span{
+    color: #3f51b5;
+}
+.private-lesson-bkg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 10px;
+    border: solid 5px #beb9ff;
+}
+.content-private-lesson{
+    margin-top: 24em;
+    
+    height: 34vh;
+}
+.btn-private-lesson{
+    border: solid 2px;
+    color: white;
+    width: 250px;
+    height: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease 0s;
+    background-color: #544af4;
+}
+.btn-private-lesson:hover{
+    background-color: #4032fc;
+}
+.btn-private-lesson:active{
+    background-color: #544af4;
+}

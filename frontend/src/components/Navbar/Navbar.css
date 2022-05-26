@@ -27,19 +27,22 @@ nav{
 .nav-li:hover{
     border: 2px solid black;
 }
+.nav-li-active{
+    border: 2px solid black;
+}
 
 .nav-content{
     display: flex;
     flex-direction: row;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 120px;
+    padding-right: 120px;
     height: 100px;
     align-items: center;
     justify-content: space-between;
     
 }
 .nav-content-logo{
-    width: 0px;
+    width: 100px;
     pointer-events: none;
     user-select: none;
 }
