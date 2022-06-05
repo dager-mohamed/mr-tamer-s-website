@@ -5,7 +5,7 @@
     flex-direction: column;
     
     height: 600px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    
     width: 500px;
 }
 .login-content{
@@ -30,15 +30,18 @@
 .input-username-password{
     outline: none;
     height: 30px;
-    background-color: rgb(252, 207, 207);
+    
     width: 400px;
     padding-left: 10px;
     border-radius: 7px;
     border: solid 3px transparent;
-    
+    transition: box-shadow 0.1s ease;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
 }
 .input-username-password:focus{
-    border: solid 3px #554af47a;
+
+    box-shadow: #4639fa7a 0px 0px 0px 3px;
+    /* border: solid 3px #554af47a; */
 }
 .login-flex2{
     padding-top: 100px;
