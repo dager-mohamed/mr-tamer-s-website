@@ -1,12 +1,35 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Landing.css";
+import { useQuery } from 'react-query'
 import { Navbar } from "../index";
+import {domain} from '../../config'
 import teaching from "../../teaching.svg";
 import { Link } from 'react-router-dom'
+import jwt from 'jwt-decode'
 export function Landing() {
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    const token = localStorage.getItem('token')
+    if(token){
+     try{
+      const user = jwt(token)
+      if(user){
+        setUser(user.username)
+      }
+      console.log(user)
+      if(!user){
+        localStorage.removeItem('token')
+      }
+     }catch(err){
+      localStorage.removeItem('token')
+     }
+
+    }
+  },[])
   return (
     <div>
-      <Navbar />
+      <Navbar user={user}/>
       {/*********/}
       <div className="content-landing">
         <div className="landing-content">
@@ -15,9 +38,13 @@ export function Landing() {
               Be master in <span className="span-landing">English</span>
             </h1>
             <div className="btn-landing">
-              <Link to="/login">
-              <button>Log in</button>
-              </Link>
+              {
+                !user? (              <Link to="/login">
+                <button>Log in</button>
+                </Link>):(              <Link to="/dashboard">
+              <button>Dashboard</button>
+              </Link>)
+              }
             </div>
           </div>
 
@@ -103,3 +130,4 @@ export function Landing() {
     </div>
   );
 }
+
