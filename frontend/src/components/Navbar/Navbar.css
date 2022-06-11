@@ -3,6 +3,7 @@
 }
 nav{
     height: 120px;
+    z-index: 1000;
 }
 .nav-ul{
     color: black;
@@ -43,7 +44,7 @@ nav{
 }
 .nav-content-logo{
     width: 100px;
-
+    z-index: 1000;
 }
 .nav-content-logo img{
     width: 200px;

@@ -1,0 +1,75 @@
+:root{
+    --sidebar-color: #fff;
+    --primary-color: #695cfe;
+    --primary-color-light: #f6f5ff;
+    --toggle-color: #ddd;
+    --text-color: #707070;
+
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+}
+.sidebar{
+    user-select: none;
+    transition: 0.3s transform ease-out;
+    z-index: 1000;
+    font-weight: 400;
+    padding: 44px 19px ;
+    position: fixed;
+    bottom: 0;
+    overflow-y: auto;
+    top: 130px;
+    width: 300px;   
+    font-size: 15px;
+    min-width: 300px;
+    background: var(--sidebar-color);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07), 
+                0 4px 8px rgba(0,0,0,0.07), 
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07), 
+                0 32px 64px rgba(0,0,0,0.07);
+    
+    
+}
+
+
+
+.sidebar ul li{
+    padding: 0 13px;
+    list-style: none;
+}
+
+.sidebar ul li a{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    height: 100%;
+    width: 90%;
+    font-size: 15px;
+    border-radius: 6px;
+    transition: var(--tran-04);
+    color: var(--text-color);
+}
+.sidebar ul li a:hover{
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.sidebar-active{
+    color: white;
+    background-color: var(--primary-color);
+}
+.sidebar-active i{
+    color: white;
+}
+.sidebar-active span{
+    color: white;
+}
+
+.sidebar ul li a i{
+    width: 40px;
+    
+    font-size: 20px;
+}

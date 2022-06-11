@@ -38,7 +38,7 @@ export function Navbar({ user }) {
                 </Link>
                 <Link to="/dashboard">
                 <li className={
-                      location.pathname == "/dashboard"
+                      location.pathname.includes('/dashboard')
                         ? "nav-li nav-li-active"
                         : "nav-li"
                     }>Dashboard</li>

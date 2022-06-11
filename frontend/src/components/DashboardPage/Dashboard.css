@@ -1,0 +1,45 @@
+.login-dashboard-btn{
+    border: solid 2px;
+    color: white;
+    width: 150px;
+    height: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 9px;
+    transition: background-color 0.3s ease 0s;
+    background-color: #544af4;
+}
+
+.login-dashboard-btn:hover{
+    background-color: #4032fc;
+}
+.login-dashboard-btn:active{
+    background-color: #544af4;
+}
+.login-dashboard-div{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-dashboard-div img{
+    width: 350px;
+}
+.content-dashboard{
+    position: absolute;
+    inset: 0px 0px 0px 400px;
+    margin-top: 95px !important;
+}
+.spinner{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 50%; right: 50%;
+
+    transform: translate(50%, -50%);
+}

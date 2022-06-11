@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import "./Dashboard.css";
+import "./HomeWork.css";
 import { Navbar } from "../Navbar/Navbar";
 import wave from "../../wave.png";
 import { domain } from "../../config";
-import { Oval } from "react-loader-spinner";
 import { Link, useNavigate } from "react-router-dom";
 import loginGIF from "../../login.gif";
-import { Sidebar } from "./Sidebar";
+import { Sidebar } from "../DashboardPage/Sidebar";
+import { Oval } from "react-loader-spinner";
 import bg from "../../bg.svg";
 import avatar from "../../avatar.svg";
 import axios from "axios";
 import jwt from "jwt-decode";
-export function Dashboard() {
+export function HomeWork() {
   let navigate = useNavigate();
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -31,16 +31,14 @@ export function Dashboard() {
         localStorage.removeItem("token");
       }
     } else {
-      setUser(false);
     }
-    setLoading(false);
+    setLoading(false)
   }, []);
   // /errorText == "error" ? errorLoginactive : errorLogin
   return (
     <div>
       <Navbar user={user} />
-      <div>
-        {!user ? (
+      {!user ? (
           loading ? (
             <div className="spinner">
               <Oval color="#00BFFF" height={30} width={30} />{" "}
@@ -66,7 +64,6 @@ export function Dashboard() {
             </div>
           </div>
         )}
-      </div>
       {/*********/}
       <div></div>
     </div>

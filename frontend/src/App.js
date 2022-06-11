@@ -6,7 +6,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import { Navbar, Landing, LoginPage, Dashboard } from './components/index'
+import { Navbar, Landing, LoginPage, Dashboard, HomeWork, Exercise } from './components/index'
 function App() {
   return (
     <div>
@@ -15,6 +15,8 @@ function App() {
         <Route path="/" element={<Landing/>} />
         <Route path="/login" element={<LoginPage/>} />
         <Route path="/dashboard" element={<Dashboard/>} />
+        <Route path="/dashboard/homework" element={<HomeWork/>} />
+        <Route path="/dashboard/exercise" element={<Exercise/>} />
       </Routes>
     </BrowserRouter>
     </div>

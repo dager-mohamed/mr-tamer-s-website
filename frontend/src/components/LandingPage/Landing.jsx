@@ -5,10 +5,11 @@ import { Navbar } from "../index";
 import {domain} from '../../config'
 import teaching from "../../teaching.svg";
 import { Link } from 'react-router-dom'
+import { LoginPage } from '../index'
 import jwt from 'jwt-decode'
 export function Landing() {
   const [user, setUser] = useState(null)
-
+  const [loginPage, setLoginPage] = useState(false)
   useEffect(() => {
     const token = localStorage.getItem('token')
     if(token){
