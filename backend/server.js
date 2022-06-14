@@ -5,7 +5,7 @@ const cors = require('cors');
 const limiter = require('express-rate-limit');
 const mongoose = require('mongoose');
 const PORT = process.env.PORT;
-const { db_uri } = require('./config.json')
+const { db_uri } = require('../config.json')
 
 
 mongoose

@@ -1,7 +1,7 @@
 const router = require("express").Router();
 const UserLogin = require('../models/user')
 const jwt = require('jsonwebtoken')
-
+const { password_jwt } = require('../../config.json')
 router.get('/', async (req, res) => {
     res.status(200).send({status: "ok"})
     res.end()
@@ -17,7 +17,7 @@ router.post('/post', async (req, res) => {
         const token = jwt.sign({
             username: req.body.username,
             password: req.body.password
-        },"Asd611611")
+        },password_jwt)
 
         return res.status(200).send({status:"ok", user: token})
     } else {
